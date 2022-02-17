@@ -11,7 +11,7 @@
 ###### Approach 1 :
   - Run the below command in Command Prompt, change the below file path to a locally saved project file path
 ```
-cd C:\AspireQACodeChallenge1202\AspireQACodeChallenge
+cd C:\DMICodeChallenge16022022\DMICodeChallenge
 mvn clean install
 ```
 ###### Approach 2 :
