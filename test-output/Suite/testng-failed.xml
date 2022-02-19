@@ -3,19 +3,26 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestPackage.AddToDosTest">
+      <class name="TestPackage.ActionsOnToDosPage">
         <methods>
-          <include name="AddToDosList"/>
+          <include name="screenShot"/>
+          <include name="ClearCompletedToDos"/>
           <include name="Cleartest"/>
-          <include name="AddToDosList1"/>
+          <include name="MakeCompletedToDo2Active"/>
+          <include name="EditToDosTest"/>
+          <include name="searchTodos" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="setup"/>
+          <include name="DeleteTodos"/>
+          <include name="ToDosCountValidationTest"/>
         </methods>
-      </class> <!-- TestPackage.AddToDosTest -->
-      <class name="TestPackage.EditTodaosTest">
+      </class> <!-- TestPackage.ActionsOnToDosPage -->
+      <class name="TestPackage.ValidationClass">
         <methods>
-          <include name="AddToDosList"/>
+          <include name="setup"/>
+          <include name="DeleteTodos1"/>
           <include name="Cleartest"/>
         </methods>
-      </class> <!-- TestPackage.EditTodaosTest -->
+      </class> <!-- TestPackage.ValidationClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -14,11 +14,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class baseClass {
 
-	public static WebDriver driver;
+	public static WebDriver driver = null;// *
 
 	public ObjectRepository ob;
-	
-	public Properties prop;
+
+	public static  Properties prop;
 
 	public baseClass() {
 		WebDriverManager.chromedriver().setup();
@@ -30,7 +30,19 @@ public class baseClass {
 
 	}
 
-	public void ReadPropertiesFile() {
+	public static void initilize() {
+		// Use Of Singleton Concept and Initilize webDriver
+		if (driver == null) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			ReadPropertiesFile();
+			driver.get(prop.getProperty("URL"));
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		}
+	}
+
+	public static void ReadPropertiesFile() {
 		File file = new File(".\\src\\main\\resources\\config.properties");
 
 		FileInputStream fileInput = null;

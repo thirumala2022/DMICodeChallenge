@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="TestPackage.ActionsOnToDosPage">
+        <methods>
+          <include name="screenShot"/>
+          <include name="Cleartest"/>
+          <include name="EditToDosTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestPackage.ActionsOnToDosPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test new(failed)" verbose="0">
+    <classes>
+      <class name="TestPackage.ValidationClass">
+        <methods>
+          <include name="MakeCompletedToDo2Active"/>
+          <include name="setup"/>
+          <include name="searchTodos" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="MakeActiveToDo2Completed"/>
+          <include name="screenShot"/>
+          <include name="ToDosCountValidationTest"/>
+          <include name="ClearCompletedToDos"/>
+          <include name="Cleartest"/>
+        </methods>
+      </class> <!-- TestPackage.ValidationClass -->
+    </classes>
+  </test> <!-- Test new(failed) -->
+</suite> <!-- Failed suite [Suite] -->

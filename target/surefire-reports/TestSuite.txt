@@ -1,0 +1,88 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 29.712 s <<< FAILURE! - in TestSuite
+EditToDosTest(TestPackage.ActionsOnToDosPage)  Time elapsed: 16.198 s  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:65)
+
+ClearCompletedToDos(TestPackage.ValidationClass)  Time elapsed: 0.001 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.ClearCompletedToDos(ValidationClass.java:48)
+
+MakeActiveToDo2Completed(TestPackage.ValidationClass)  Time elapsed: 0 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.MakeActiveToDo2Completed(ValidationClass.java:59)
+
+MakeCompletedToDo2Active(TestPackage.ValidationClass)  Time elapsed: 0 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.MakeCompletedToDo2Active(ValidationClass.java:81)
+
+ToDosCountValidationTest(TestPackage.ValidationClass)  Time elapsed: 0.001 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.ToDosCountValidationTest(ValidationClass.java:106)
+
+searchTodos(TestPackage.ValidationClass)  Time elapsed: 0 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
+
+searchTodos(TestPackage.ValidationClass)  Time elapsed: 0 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
+
+searchTodos(TestPackage.ValidationClass)  Time elapsed: 0.001 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
+
+searchTodos(TestPackage.ValidationClass)  Time elapsed: 0.001 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
+
+searchTodos(TestPackage.ValidationClass)  Time elapsed: 0.001 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
+
+searchTodos(TestPackage.ValidationClass)  Time elapsed: 0 s  <<< FAILURE!
+org.openqa.selenium.NoSuchSessionException: 
+Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-MATN0N1', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: driver.version: RemoteWebDriver
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
+
