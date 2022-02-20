@@ -47,7 +47,8 @@ mvn clean install
  - Scenario 05 -Verify user can make Completed ToDo to Active or not
  - Scenario 06 - Verify user can clear All completed ToDos or not
  - Scenario 07 - Verify given Todo is available in existing ToDos list or not
- - 
+ - Scenario 08 - Verify user can clear all Completed ToDos on click on Clear Completed button
+  
 ## 03 - Failed Scenario
  - Scenario 05 -Verify user can make Completed ToDo to Active or not
    -When user checked any ToDo Item then that particular Item become strike off which should be part of completed Items List, but that particular ToDo Item name changed to "false"   
@@ -57,5 +58,31 @@ mvn clean install
   - Reports and Logs are maintaining using TestNg and ScreenShots captured for failed scenarios
        - .\\test-output\\emailable-report.html
   - Java class file files Information :
- ```
+ ``` 
+ baseClass.java  => Static browser instance creation
+ 
+  ObjectRepository.java => Instantiated All Web Elements and  Defined the common methods
+  
+  ExcelUtil.java => Which reads excel Input data
+  
+  Helper.java => Contains the methods which defines the business logic
+  
+  ActionsonToDosPage.java : Included below Test Methods
+  
+    1.	Adding New ToDos ToDo existing Items (AddToDosListTest)
+    2.	Edit existing ToDo Item (EditToDosTest)
+    3.	Delete required ToDo Item (DeleteTodos)
+    
+ValidationClass.java : : Included below Test Methods
+
+    1.	Search required to from existing list(searchTodos)
+    2.	Clear all completed todos (ClearCompletedToDos)
+    3.	Make the Active todos to Completed ToDos (MakeActiveToDo2Completed)
+    4.	Make the completed ToDos to Active ToDos (MakeCompletedToDo2Active)
+    5.	Validate Total ToDos count in Section “All” equals to Sum of Active and Completed sections ToDos(ToDosCountValidationTest)
+
+RequestResponceTest.java : Included below Test Method
+
+  1.	Search the required toDo by using API request-response (ValidateAPIResponce)
+
  ```
