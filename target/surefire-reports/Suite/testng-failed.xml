@@ -9,6 +9,7 @@
           <include name="Cleartest"/>
           <include name="EditToDosTest"/>
           <include name="setup"/>
+          <include name="DeleteTodos"/>
         </methods>
       </class> <!-- TestPackage.ActionsOnToDosPage -->
     </classes>
@@ -29,4 +30,15 @@
       </class> <!-- TestPackage.ValidationClass -->
     </classes>
   </test> <!-- Test new(failed) -->
+  <test thread-count="5" name="Test api(failed)" verbose="0">
+    <classes>
+      <class name="ServicePackage.RequestResponceTest">
+        <methods>
+          <include name="Cleartest"/>
+          <include name="ValidateAPIResponce"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- ServicePackage.RequestResponceTest -->
+    </classes>
+  </test> <!-- Test api(failed) -->
 </suite> <!-- Failed suite [Suite] -->

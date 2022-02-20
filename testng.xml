@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" verbose="1">
   <test name="Test">
     <classes>     
       <class name="TestPackage.ActionsOnToDosPage"/>
+       <class name="TestPackage.ValidationClass"/>     
+       <class name="ServicePackage.RequestResponceTest"/>     
     </classes>
-  </test> <!-- Test -->  
-  <test name="Test new">
-    <classes>
-      <class name="TestPackage.ValidationClass"/>     
-    </classes>
-  </test> <!-- Test -->
+  </test> <!-- Test -->    
 </suite> <!-- Suite -->

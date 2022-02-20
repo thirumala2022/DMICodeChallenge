@@ -5,6 +5,7 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +22,7 @@ public class ValidationClass {
 
 	Helper hp;
 
-	@BeforeMethod
+	@BeforeClass
 	public void setup() {
 		baseClass.initilize();
 	}
@@ -38,7 +39,7 @@ public class ValidationClass {
 	}
 
 	/**
-	 *  Clear the Completed ToDos 
+	 * Clear the Completed ToDos
 	 **/
 	@Test
 	public void ClearCompletedToDos() {
@@ -50,19 +51,18 @@ public class ValidationClass {
 	}
 
 	/**
-	 *  Make Active ToDo to Completed ToDo 
+	 * Make Active ToDo to Completed ToDo
 	 **/
 	@Test
 	public void MakeActiveToDo2Completed() {
 
 		hp = new Helper(baseClass.driver);
 		hp.AllToDosVisibilitySection();
-		String newToDo=baseClass.prop.getProperty("AddNewToDo");
+		String newToDo = baseClass.prop.getProperty("AddNewToDo");
 		try {
-			hp.AddTodos("New ToDo Entry 17");
+			hp.AddTodos(newToDo);
 			hp.MakeActivetoCompleted(newToDo);
-			hp.validateGivenTodoCheck(newToDo, "Completed");
-			boolean flag = hp.validateGivenTodoCheck(newToDo, "Active");
+			boolean flag = hp.validateGivenTodoCheck(newToDo, "Completed");
 			System.out.println(" flag value : " + flag);
 			Assert.assertEquals(flag, true);
 		} catch (Exception ex) {
@@ -72,15 +72,15 @@ public class ValidationClass {
 	}
 
 	/**
-	 *  Make Completed ToDo to Active ToDo *
+	 * Make Completed ToDo to Active ToDo *
 	 **/
 	@Test
 	public void MakeCompletedToDo2Active() {
 
 		hp = new Helper(baseClass.driver);
 		hp.AllToDosVisibilitySection();
-		
-		String AddNew=baseClass.prop.getProperty("AddNewToDo");
+
+		String AddNew = baseClass.prop.getProperty("AddToDo");
 		try {
 			hp.AddTodos(AddNew);
 			hp.MakeActivetoCompleted(AddNew);
@@ -111,8 +111,8 @@ public class ValidationClass {
 	}
 
 	/**
-	 *  Take Screen shot of failure Case 
-	 *  **/
+	 * Take Screen shot of failure Case
+	 **/
 
 	@AfterMethod
 	public void screenShot(ITestResult result) {
@@ -141,9 +141,9 @@ public class ValidationClass {
 	}
 
 	/**
-	 *  Close all browser Instances 
-	 *  **/
-	@AfterTest
+	 * Close all browser Instances
+	 **/
+	@AfterClass
 	public void Cleartest() {
 		baseClass.driver.quit();
 

@@ -44,6 +44,7 @@ public class Helper {
 		JavascriptExecutor js = (JavascriptExecutor) webdriver;
 		By Byelt = ob.dynamicElement1(text, "destory");
 		By elt = ob.dynamicElement(text);
+		System.out.println(ob.FIndElement(elt).getAttribute("class"));
 		// js.executeScript("window.scrollBy(0,250)", "");
 		Actions act = new Actions(webdriver);
 		act.moveToElement(ob.FIndElement(elt)).perform();
@@ -78,6 +79,14 @@ public class Helper {
 		return flag;
 	}
 
+	public int ToDosCount() {
+		ob = new ObjectRepository(webdriver);
+		List<String> lstAll = new ArrayList<String>();
+		lstAll = ob.findListOfWebElements(ob.eltSection);
+
+		return lstAll.size();
+	}
+
 	public boolean ToDosCountValidation() {
 
 		ob = new ObjectRepository(webdriver);
@@ -90,26 +99,29 @@ public class Helper {
 		lstActive = ob.findListOfWebElements(ob.eltActiveList);
 
 		ob.ClickElement(ob.eltCompleted);
-		lstCompleted = ob.findListOfWebElements(ob.eltCompletedList);		
-		
-		for(String all: lstAll ) System.out.print(all+"   ");
+		lstCompleted = ob.findListOfWebElements(ob.eltCompletedList);
+
+		for (String all : lstAll)
+			System.out.print(all + "   ");
 		System.out.println("Active List : ");
-		for(String Active: lstActive ) System.out.print(Active+"   ");
+		for (String Active : lstActive)
+			System.out.print(Active + "   ");
 		System.out.println("Completed List : ");
-		
-		for(String completed: lstCompleted ) System.out.print(completed+"   ");
-		if (lstAll.size()-1 == (lstActive.size() + lstCompleted.size()))
+
+		for (String completed : lstCompleted)
+			System.out.print(completed + "   ");
+		if (lstAll.size() - 1 == (lstActive.size() + lstCompleted.size()))
 			return true;
 
 		else
 			return false;
 
 	}
-	
+
 	public void AllToDosVisibilitySection() {
 		ob = new ObjectRepository(webdriver);
 		ob.ClickElement(ob.eltAll);
-		
+
 	}
 
 	public boolean validateGivenTodoCheck(String TodoName, String sectionName) {
@@ -127,7 +139,7 @@ public class Helper {
 		for (String todo : lst) {
 			System.out.println(todo);
 			if (todo.equalsIgnoreCase(TodoName)) {
-				System.out.println(todo + "snfdsfdskfkdskfjdsflkdsf fjdfkjdsljflds jlkdjlfdsljflkjds");
+
 				flag = true;
 				break;
 			}

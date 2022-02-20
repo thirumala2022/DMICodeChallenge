@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPackage.ValidationClass">
+      <class name="TestFailedCases">
         <methods>
-          <include name="setup"/>
-          <include name="DeleteTodos1"/>
           <include name="MakeActiveToDo2Completed"/>
-          <include name="Cleartest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- TestPackage.ValidationClass -->
+      </class> <!-- TestFailedCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 20 02:38:36 IST 2022</td>
+<td>Started on:</td><td>Sun Feb 20 16:07:05 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28836 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12944 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,27 +76,27 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='TestPackage.ActionsOnToDosPage.EditToDosTest()'><b>EditToDosTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br/>
-<a href="#Output-1596278280" onClick='toggleBox("Output-1596278280", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1422883946" onClick='toggleBox("Output-1422883946", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1596278280" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1596278280">
+<a href="#Output-1422883946" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1422883946">
 Edit the Existing ToDo <br/>
 Edit got failed<br/>
-[Ljava.lang.StackTraceElement;@4b0f2299<br/>
+[Ljava.lang.StackTraceElement;@290d10ef<br/>
 </div>
 </td>
 <td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:65)
+	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:70)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1596278280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1596278280'><pre>java.lang.AssertionError: expected [false] but found [true]
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1422883946", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1422883946'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:819)
 	at org.testng.Assert.assertEquals(Assert.java:829)
-	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:65)
+	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,8 +130,66 @@ Edit got failed<br/>
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 </pre></div></td>
-<td>16</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
+<td>1</td>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
+<tr>
+<td title='TestPackage.ActionsOnToDosPage.DeleteTodos()'><b>DeleteTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br/>
+<a href="#Output-180489140" onClick='toggleBox("Output-180489140", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-180489140" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-180489140">
+Delete existing ToDo<br/>
+Edit got failed<br/>
+[Ljava.lang.StackTraceElement;@396ef8b2<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+	at TestPackage.ActionsOnToDosPage.DeleteTodos(ActionsOnToDosPage.java:97)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 37 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace180489140", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace180489140'><pre>java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:819)
+	at org.testng.Assert.assertEquals(Assert.java:829)
+	at TestPackage.ActionsOnToDosPage.DeleteTodos(ActionsOnToDosPage.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>1</td>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -141,77 +199,65 @@ Edit got failed<br/>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 2<br/>
-<a href="#Output-1309191417" onClick='toggleBox("Output-1309191417", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1309191417" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1309191417">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 2<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 1<br/>
-<a href="#Output-459030111" onClick='toggleBox("Output-459030111", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-459030111" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-459030111">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 1<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 5<br/>
-<a href="#Output-931987151" onClick='toggleBox("Output-931987151", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-931987151" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-931987151">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 5<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
-<tr>
 <td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 3<br/>
-<a href="#Output-720803395" onClick='toggleBox("Output-720803395", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-547380018" onClick='toggleBox("Output-547380018", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-720803395" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-720803395">
+<a href="#Output-547380018" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-547380018">
 Add New Todo to existing list - ToDo Name :New ToDo Entry 3<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.DeleteTodos()'><b>DeleteTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br/>
-<a href="#Output-1167522035" onClick='toggleBox("Output-1167522035", this, "Show output", "Hide output");'>Show output</a>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 1<br/>
+<a href="#Output-1760763936" onClick='toggleBox("Output-1760763936", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1167522035" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1167522035">
-Delete existing ToDo<br/>
+<a href="#Output-1760763936" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1760763936">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 1<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
+<tr>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 5<br/>
+<a href="#Output-1565614310" onClick='toggleBox("Output-1565614310", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1565614310" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1565614310">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 5<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
 <tr>
 <td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 4<br/>
-<a href="#Output-439078230" onClick='toggleBox("Output-439078230", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-684220724" onClick='toggleBox("Output-684220724", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-439078230" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-439078230">
+<a href="#Output-684220724" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-684220724">
 Add New Todo to existing list - ToDo Name :New ToDo Entry 4<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>TestPackage.ActionsOnToDosPage@6a6afff2</td></tr>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
+<tr>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 2<br/>
+<a href="#Output-524606891" onClick='toggleBox("Output-524606891", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-524606891" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-524606891">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestPackage.ActionsOnToDosPage@55536d9e</td></tr>
 </table><p>
 </body>
 </html>

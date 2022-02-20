@@ -17,7 +17,7 @@ public class ObjectRepository {
 
 	public By eltNewTodo = By.id("new-todo");
 	public By eltDelete = By.xpath("//label[text()='a todo']//following::button");
-	public By eltClearCompletedbtn = By.xpath("//button[@id='clear-completed']'");
+	public By eltClearCompletedbtn = By.xpath("//button[@id='clear-completed']");
 	public By eltSection = By.xpath("//section[@id='main']//following::li");
 	public By eltAll = By.xpath("//a[text()='All']");//
 	public By eltActive = By.xpath("//a[text()='Active']");
@@ -96,7 +96,7 @@ public class ObjectRepository {
 
 	public By dynamicElement1(String Text, String eltType) {
 		if (eltType == "destroy")
-			return By.xpath("//label[text()='" + Text + "']//following::button");
+			return By.xpath("//label[text()='" + Text + "']//following-sibling::button");
 		else if (eltType == "checkBox")
 			return By.xpath("//label[text()='" + Text + "']/preceding-sibling::input[@type='checkbox']"); // label[text()='false']
 		else if (eltType == "edit")

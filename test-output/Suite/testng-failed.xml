@@ -6,20 +6,21 @@
       <class name="TestPackage.ActionsOnToDosPage">
         <methods>
           <include name="screenShot"/>
-          <include name="ClearCompletedToDos"/>
           <include name="Cleartest"/>
-          <include name="MakeCompletedToDo2Active"/>
           <include name="EditToDosTest"/>
-          <include name="searchTodos" invocation-numbers="0 1 2 3 4 5"/>
           <include name="setup"/>
           <include name="DeleteTodos"/>
-          <include name="ToDosCountValidationTest"/>
         </methods>
       </class> <!-- TestPackage.ActionsOnToDosPage -->
       <class name="TestPackage.ValidationClass">
         <methods>
+          <include name="MakeCompletedToDo2Active"/>
           <include name="setup"/>
-          <include name="DeleteTodos1"/>
+          <include name="searchTodos" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="MakeActiveToDo2Completed"/>
+          <include name="screenShot"/>
+          <include name="ToDosCountValidationTest"/>
+          <include name="ClearCompletedToDos"/>
           <include name="Cleartest"/>
         </methods>
       </class> <!-- TestPackage.ValidationClass -->

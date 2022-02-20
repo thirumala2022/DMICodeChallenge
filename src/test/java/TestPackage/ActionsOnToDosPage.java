@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,14 +23,19 @@ import MainPackage.baseClass;
 public class ActionsOnToDosPage {
 	Helper hp;
 
-	@BeforeMethod
+	/**
+	 * Launch the application in chrome browser
+	 */
+	@BeforeClass
 	public void setup() {
 		baseClass.initilize();
 	}
 
 	/**
 	 * Add new List of ToDos
-	 **/
+	 * 
+	 * @param TodoName
+	 */
 	@Test(dataProvider = "InputData")
 	public void AddToDosListTest(String TodoName) {
 		hp = new Helper(baseClass.driver);
@@ -48,12 +54,12 @@ public class ActionsOnToDosPage {
 
 	/**
 	 * Edit the existing ToDo
-	 **/
+	 */
 	@Test
 	public void EditToDosTest() {
 		hp = new Helper(baseClass.driver);
-		String edittodo=baseClass.prop.getProperty("EditToDoOld");
-		String edittodoUpdated=baseClass.prop.getProperty("EditToDoUpdated");
+		String edittodo = baseClass.prop.getProperty("EditToDoOld");
+		String edittodoUpdated = baseClass.prop.getProperty("EditToDoUpdated");
 		try {
 			Reporter.log("Edit the Existing ToDo ");
 			hp.EditTodos(edittodo, edittodoUpdated);
@@ -73,12 +79,19 @@ public class ActionsOnToDosPage {
 	@Test
 	public void DeleteTodos() {
 		hp = new Helper(baseClass.driver);
-		String deletetodo=baseClass.prop.getProperty("DeleteToDo");
+		String deletetodo = baseClass.prop.getProperty("DeleteToDo");
 		try {
 			Reporter.log("Delete existing ToDo");
+			int beforeDeleteToDosCount = hp.ToDosCount();
+			Reporter.log("Before DelteToDos Count=" + beforeDeleteToDosCount);
+
+			Reporter.log("Delete the TodoName= " + deletetodo);
+			;
 			hp.DeleteTodo(deletetodo);
-			
-			
+			int afterDeleteToDosCount = hp.ToDosCount();
+
+			Reporter.log("After DelteToDos Count=" + afterDeleteToDosCount);
+			Assert.assertEquals(beforeDeleteToDosCount - 1, afterDeleteToDosCount);
 		} catch (Exception ex) {
 			Reporter.log("Edit got failed");
 			Reporter.log(ex.getStackTrace().toString());
@@ -86,9 +99,11 @@ public class ActionsOnToDosPage {
 		}
 	}
 
-	
-
-	/* Take Screen shot of failure Case */
+	/**
+	 * Take Screen shot of failure Case
+	 * 
+	 * @param result
+	 */
 
 	@AfterMethod
 	public void screenShot(ITestResult result) {
@@ -116,9 +131,9 @@ public class ActionsOnToDosPage {
 
 	}
 
-	
-
-	/* Close all browser Instances */
+	/**
+	 * Close all browser Instances
+	 */
 	@AfterTest
 	public void Cleartest() {
 		baseClass.driver.quit();

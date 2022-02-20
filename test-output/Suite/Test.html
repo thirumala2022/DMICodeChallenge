@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/12/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/12/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 20 01:57:57 IST 2022</td>
+<td>Started on:</td><td>Sun Feb 20 16:15:23 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>176 seconds (176010 ms)</td>
+<tr><td>Total time:</td><td>128 seconds (128592 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.MakeCompletedToDo2Active()'><b>MakeCompletedToDo2Active</b><br>Test class: TestPackage.ActionsOnToDosPage</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at TestPackage.ActionsOnToDosPage.MakeCompletedToDo2Active(ActionsOnToDosPage.java:127)
+<td title='TestPackage.ValidationClass.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ValidationClass<br>Parameters: New ToDo Entry 8<br/>
+<a href="#Output-433404596" onClick='toggleBox("Output-433404596", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-433404596" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-433404596">
+Search New ToDo Entry 8 from existing ToDos List<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
+	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2106390956", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2106390956'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:819)
-	at org.testng.Assert.assertEquals(Assert.java:829)
-	at TestPackage.ActionsOnToDosPage.MakeCompletedToDo2Active(ActionsOnToDosPage.java:127)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace433404596", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace433404596'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
+	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,30 +139,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
-<td title='TestPackage.ValidationClass.DeleteTodos1()'><b>DeleteTodos1</b><br>Test class: TestPackage.ValidationClass<br/>
-<a href="#Output-1564078808" onClick='toggleBox("Output-1564078808", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1564078808" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1564078808">
-Delete existing ToDo<br/>
-Delete got failed<br/>
-[Ljava.lang.StackTraceElement;@30135202<br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at TestPackage.ValidationClass.DeleteTodos1(ValidationClass.java:36)
+<td title='TestPackage.ValidationClass.MakeCompletedToDo2Active()'><b>MakeCompletedToDo2Active</b><br>Test class: TestPackage.ValidationClass</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at TestPackage.ValidationClass.MakeCompletedToDo2Active(ValidationClass.java:94)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1564078808", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1564078808'><pre>java.lang.AssertionError: expected [false] but found [true]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace182926464", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace182926464'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:819)
 	at org.testng.Assert.assertEquals(Assert.java:829)
-	at TestPackage.ValidationClass.DeleteTodos1(ValidationClass.java:36)
+	at TestPackage.ValidationClass.MakeCompletedToDo2Active(ValidationClass.java:94)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -171,31 +183,31 @@ Delete got failed<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>5</td>
-<td>TestPackage.ValidationClass@a530d0a</td></tr>
+<td>1</td>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
 <td title='TestPackage.ActionsOnToDosPage.EditToDosTest()'><b>EditToDosTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br/>
-<a href="#Output-1464031233" onClick='toggleBox("Output-1464031233", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-721671471" onClick='toggleBox("Output-721671471", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1464031233" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1464031233">
+<a href="#Output-721671471" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-721671471">
 Edit the Existing ToDo <br/>
 Edit got failed<br/>
-[Ljava.lang.StackTraceElement;@67774e29<br/>
+[Ljava.lang.StackTraceElement;@3804a9a8<br/>
 </div>
 </td>
 <td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:57)
+	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:70)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1464031233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1464031233'><pre>java.lang.AssertionError: expected [false] but found [true]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace721671471", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace721671471'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:819)
 	at org.testng.Assert.assertEquals(Assert.java:829)
-	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:57)
+	at TestPackage.ActionsOnToDosPage.EditToDosTest(ActionsOnToDosPage.java:70)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -225,36 +237,43 @@ Edit got failed<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>1</td>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 3</td>
+<td title='TestPackage.ValidationClass.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ValidationClass<br>Parameters: New ToDo Entry 7<br/>
+<a href="#Output-649316770" onClick='toggleBox("Output-649316770", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-649316770" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-649316770">
+Search New ToDo Entry 7 from existing ToDos List<br/>
+</div>
+</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1747862060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1747862060'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace649316770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace649316770'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -285,89 +304,30 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 5</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
-	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1036529258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1036529258'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
-	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
 <td title='TestPackage.ActionsOnToDosPage.DeleteTodos()'><b>DeleteTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br/>
-<a href="#Output-266554246" onClick='toggleBox("Output-266554246", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-2099878104" onClick='toggleBox("Output-2099878104", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-266554246" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-266554246">
+<a href="#Output-2099878104" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2099878104">
 Delete existing ToDo<br/>
 Edit got failed<br/>
-[Ljava.lang.StackTraceElement;@fd53053<br/>
+[Ljava.lang.StackTraceElement;@761956ac<br/>
 </div>
 </td>
 <td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at TestPackage.ActionsOnToDosPage.DeleteTodos(ActionsOnToDosPage.java:72)
+	at TestPackage.ActionsOnToDosPage.DeleteTodos(ActionsOnToDosPage.java:97)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace266554246", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace266554246'><pre>java.lang.AssertionError: expected [false] but found [true]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2099878104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2099878104'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:819)
 	at org.testng.Assert.assertEquals(Assert.java:829)
-	at TestPackage.ActionsOnToDosPage.DeleteTodos(ActionsOnToDosPage.java:72)
+	at TestPackage.ActionsOnToDosPage.DeleteTodos(ActionsOnToDosPage.java:97)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -397,36 +357,88 @@ Edit got failed<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>5</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>1</td>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 7</td>
+<td title='TestPackage.ValidationClass.ToDosCountValidationTest()'><b>ToDosCountValidationTest</b><br>Test class: TestPackage.ValidationClass</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at TestPackage.ValidationClass.ToDosCountValidationTest(ValidationClass.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace99219259", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace99219259'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:819)
+	at org.testng.Assert.assertEquals(Assert.java:829)
+	at TestPackage.ValidationClass.ToDosCountValidationTest(ValidationClass.java:109)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
+<tr>
+<td title='TestPackage.ValidationClass.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ValidationClass<br>Parameters: New ToDo Entry 5<br/>
+<a href="#Output-18130400" onClick='toggleBox("Output-18130400", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-18130400" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-18130400">
+Search New ToDo Entry 5 from existing ToDos List<br/>
+</div>
+</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace22800011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace22800011'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace18130400", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace18130400'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -457,35 +469,42 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 8</td>
+<td title='TestPackage.ValidationClass.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ValidationClass<br>Parameters: New ToDo Entry 6<br/>
+<a href="#Output-2098992714" onClick='toggleBox("Output-2098992714", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2098992714" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2098992714">
+Search New ToDo Entry 6 from existing ToDos List<br/>
+</div>
+</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1455871253", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1455871253'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2098992714", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2098992714'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -516,35 +535,42 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 4</td>
+<td title='TestPackage.ValidationClass.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ValidationClass<br>Parameters: New ToDo Entry 4<br/>
+<a href="#Output-1508750581" onClick='toggleBox("Output-1508750581", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1508750581" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1508750581">
+Search New ToDo Entry 4 from existing ToDos List<br/>
+</div>
+</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace333447190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace333447190'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1508750581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1508750581'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -575,75 +601,23 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 6</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
-	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace554280593", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace554280593'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
-	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.validateGivenTodo(Helper.java:70)
-	at TestPackage.ActionsOnToDosPage.searchTodos(ActionsOnToDosPage.java:82)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.ClearCompletedToDos()'><b>ClearCompletedToDos</b><br>Test class: TestPackage.ActionsOnToDosPage</td>
+<td title='TestPackage.ValidationClass.ClearCompletedToDos()'><b>ClearCompletedToDos</b><br>Test class: TestPackage.ValidationClass<br/>
+<a href="#Output-1040172900" onClick='toggleBox("Output-1040172900", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1040172900" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1040172900">
+Clear the completed ToDos<br/>
+</div>
+</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@id=&apos;clear-completed&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.ScrollDownElementClick(ObjectRepository.java:66)
-	at MainPackage.Helper.ClearCompletedToDos(Helper.java:134)
-	at TestPackage.ActionsOnToDosPage.ClearCompletedToDos(ActionsOnToDosPage.java:90)
+	at MainPackage.Helper.ClearCompletedToDos(Helper.java:152)
+	at TestPackage.ValidationClass.ClearCompletedToDos(ValidationClass.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 Caused by: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //button[@id=&apos;clear-completed&apos;]&apos; because of the following error:
 SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//button[@id=&apos;clear-completed&apos;]&apos;&apos; is not a valid XPath expression.
@@ -652,8 +626,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 *** Element info: {Using=xpath, value=//button[@id=&apos;clear-completed&apos;]&apos;}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -669,14 +643,14 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 32 more
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2140396878", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2140396878'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@id=&apos;clear-completed&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1040172900", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1040172900'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //button[@id=&apos;clear-completed&apos;]&apos; (tried for 15 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.ScrollDownElementClick(ObjectRepository.java:66)
-	at MainPackage.Helper.ClearCompletedToDos(Helper.java:134)
-	at TestPackage.ActionsOnToDosPage.ClearCompletedToDos(ActionsOnToDosPage.java:90)
+	at MainPackage.Helper.ClearCompletedToDos(Helper.java:152)
+	at TestPackage.ValidationClass.ClearCompletedToDos(ValidationClass.java:48)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -712,10 +686,10 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 *** Element info: {Using=xpath, value=//button[@id=&apos;clear-completed&apos;]&apos;}
-	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+	at jdk.internal.reflect.GeneratedConstructorAccessor16.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
@@ -734,35 +708,42 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	... 32 more
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.ToDosCountValidationTest()'><b>ToDosCountValidationTest</b><br>Test class: TestPackage.ActionsOnToDosPage</td>
+<td title='TestPackage.ValidationClass.searchTodos()'><b>searchTodos</b><br>Test class: TestPackage.ValidationClass<br>Parameters: New ToDo Entry 3<br/>
+<a href="#Output-2125594830" onClick='toggleBox("Output-2125594830", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2125594830" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2125594830">
+Search New ToDo Entry 3 from existing ToDos List<br/>
+</div>
+</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.ToDosCountValidation(Helper.java:87)
-	at TestPackage.ActionsOnToDosPage.ToDosCountValidationTest(ActionsOnToDosPage.java:139)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace581067007", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace581067007'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2125594830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2125594830'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //section[@id=&apos;main&apos;]//following::li (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-MATN0N1&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62557}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c4fc96819bc48b0ec9ddb9563567aa87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\v-tballa\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a501b55ca7eebf4fc9f50fb0364abdb5
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at MainPackage.ObjectRepository.WaitElementExists(ObjectRepository.java:81)
 	at MainPackage.ObjectRepository.findListOfWebElements(ObjectRepository.java:49)
-	at MainPackage.Helper.ToDosCountValidation(Helper.java:87)
-	at TestPackage.ActionsOnToDosPage.ToDosCountValidationTest(ActionsOnToDosPage.java:139)
+	at MainPackage.Helper.validateGivenTodo(Helper.java:71)
+	at TestPackage.ValidationClass.searchTodos(ValidationClass.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -793,7 +774,52 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>15</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
+<tr>
+<td title='TestPackage.ValidationClass.MakeActiveToDo2Completed()'><b>MakeActiveToDo2Completed</b><br>Test class: TestPackage.ValidationClass</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at TestPackage.ValidationClass.MakeActiveToDo2Completed(ValidationClass.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2121443020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2121443020'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:819)
+	at org.testng.Assert.assertEquals(Assert.java:829)
+	at TestPackage.ValidationClass.MakeActiveToDo2Completed(ValidationClass.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>TestPackage.ValidationClass@53ce1329</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -803,75 +829,112 @@ Session ID: c4fc96819bc48b0ec9ddb9563567aa87
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 1<br/>
-<a href="#Output-2091439256" onClick='toggleBox("Output-2091439256", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2091439256" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2091439256">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 1<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 3<br/>
-<a href="#Output-1130258687" onClick='toggleBox("Output-1130258687", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1130258687" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1130258687">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 3<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 2<br/>
-<a href="#Output-501991708" onClick='toggleBox("Output-501991708", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-501991708" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-501991708">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 2<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
-<tr>
-<td title='TestPackage.ValidationClass.MakeActiveToDo2Completed()'><b>MakeActiveToDo2Completed</b><br>Test class: TestPackage.ValidationClass</td>
-<td></td>
-<td>1</td>
-<td>TestPackage.ValidationClass@a530d0a</td></tr>
-<tr>
-<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 4<br/>
-<a href="#Output-351216770" onClick='toggleBox("Output-351216770", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-351216770" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-351216770">
-Add New Todo to existing list - ToDo Name :New ToDo Entry 4<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
-<tr>
 <td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 5<br/>
-<a href="#Output-1078448857" onClick='toggleBox("Output-1078448857", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-973604748" onClick='toggleBox("Output-973604748", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1078448857" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1078448857">
+<a href="#Output-973604748" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-973604748">
 Add New Todo to existing list - ToDo Name :New ToDo Entry 5<br/>
 </div>
 </td>
 <td></td>
 <td>0</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
 <tr>
-<td title='TestPackage.ActionsOnToDosPage.MakeActiveToDo2Completed()'><b>MakeActiveToDo2Completed</b><br>Test class: TestPackage.ActionsOnToDosPage</td>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 1<br/>
+<a href="#Output-1431099210" onClick='toggleBox("Output-1431099210", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1431099210" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1431099210">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 1<br/>
+</div>
+</td>
 <td></td>
-<td>1</td>
-<td>TestPackage.ActionsOnToDosPage@18d87d80</td></tr>
+<td>0</td>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
+<tr>
+<td title='ServicePackage.RequestResponceTest.ValidateAPIResponce()'><b>ValidateAPIResponce</b><br>Test class: ServicePackage.RequestResponceTest<br/>
+<a href="#Output-326611360" onClick='toggleBox("Output-326611360", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-326611360" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-326611360">
+Add New Todo to existing list New ToDo Check<br/>
+https://mysterious-thicket-31854.herokuapp.com/#/active<br/>
+[{"id": 5, "title": "a todo", "completed": true, "url": null, "order": 0, "created_at": "2019-03-28T04:53:26.483719+00:00", "updated_at": "2019-03-28T04:53:26.483719+00:00"}, {"id": 6, "title": "a todo", "completed": false, "url": null, "order": 0, "created_at": "2019-03-28T04:53:49.348164+00:00", "updated_at": "2019-03-28T04:53:49.348164+00:00"}, {"id": 7, "title": "a todo", "completed": true, "url": null, "order": 0, "created_at": "2019-03-28T05:48:20.454756+00:00", "updated_at": "2019-03-28T05:48:20.454756+00:00"}, {"id": 8, "title": "a todo", "completed": true, "url": null, "order": 0, "created_at": "2019-03-28T05:48:49.280879+00:00", "updated_at": "2019-03-28T05:48:49.280879+00:00"}, {"id": 9, "title": "a todo", "completed": true, "url": "9", "order": 0, "created_at": "2019-03-28T06:07:55.557717+00:00", "updated_at": "2019-03-28T06:07:55.562107+00:00"}, {"id": 10, "title": "a todo", "completed": true, "url": "//10", "order": 0, "created_at": "2019-03-28T06:21:35.070721+00:00", "updated_at": "2019-03-28T06:21:35.075518+00:00"}, {"id": 11, "title": "a todo", "completed": true, "url": "https://mysterious-thicket-31854.herokuapp.com/", "order": 0, "created_at": "2019-03-28T06:56:56.880499+00:00", "updated_at": "2019-03-28T06:56:56.884944+00:00"}, {"id": 12, "title": "a todo", "completed": true, "url": null, "order": 0, "created_at": "2019-03-28T06:59:23.110846+00:00", "updated_at": "2019-03-28T06:59:23.110846+00:00"}, {"id": 13, "title": "a todo", "completed": true, "url": null, "order": 0, "created_at": "2019-03-28T06:59:25.684496+00:00", "updated_at": "2019-03-28T06:59:25.684496+00:00"}, {"id": 14, "title": "a todo", "completed": true, "url": "https://mysterious-thicket-31854.herokuapp.com/14", "order": 0, "created_at": "2019-03-28T07:01:24.558295+00:00", "updated_at": "2019-03-28T07:01:24.561236+00:00"}, {"id": 17, "title": "New ToDo Entry 3", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/17", "order": 2, "created_at": "2022-02-20T10:15:16.679195+00:00", "updated_at": "2022-02-20T10:15:16.700666+00:00"}, {"id": 18, "title": "New ToDo Entry 6", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/18", "order": 3, "created_at": "2022-02-20T10:15:19.404033+00:00", "updated_at": "2022-02-20T10:15:19.409515+00:00"}, {"id": 19, "title": "New ToDo Entry 2", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/19", "order": 4, "created_at": "2022-02-20T10:20:55.309811+00:00", "updated_at": "2022-02-20T10:20:55.314391+00:00"}, {"id": 20, "title": "New ToDo got Updated", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/20", "order": 0, "created_at": "2022-02-20T10:36:11.005889+00:00", "updated_at": "2022-02-20T10:37:16.625860+00:00"}, {"id": 21, "title": "New ToDo Entry 2", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/21", "order": 2, "created_at": "2022-02-20T10:36:11.027758+00:00", "updated_at": "2022-02-20T10:36:11.031950+00:00"}, {"id": 22, "title": "New ToDo Entry 4", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/22", "order": 6, "created_at": "2022-02-20T10:36:11.239624+00:00", "updated_at": "2022-02-20T10:36:11.243600+00:00"}, {"id": 23, "title": "New ToDo Entry 3", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/23", "order": 5, "created_at": "2022-02-20T10:36:11.263603+00:00", "updated_at": "2022-02-20T10:36:11.267392+00:00"}, {"id": 24, "title": "New ToDo Entry 5", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/24", "order": 7, "created_at": "2022-02-20T10:36:11.421767+00:00", "updated_at": "2022-02-20T10:36:11.425559+00:00"}, {"id": 25, "title": "New ToDo got Updated", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/25", "order": 0, "created_at": "2022-02-20T10:37:12.985609+00:00", "updated_at": "2022-02-20T10:42:22.995931+00:00"}, {"id": 26, "title": "New ToDo Entry 3", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/26", "order": 9, "created_at": "2022-02-20T10:37:13.218110+00:00", "updated_at": "2022-02-20T10:37:13.228791+00:00"}, {"id": 27, "title": "New ToDo Entry 4", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/27", "order": 10, "created_at": "2022-02-20T10:37:13.593991+00:00", "updated_at": "2022-02-20T10:37:13.599428+00:00"}, {"id": 28, "title": "New ToDo Entry 2", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/28", "order": 8, "created_at": "2022-02-20T10:37:13.767911+00:00", "updated_at": "2022-02-20T10:37:13.777688+00:00"}, {"id": 29, "title": "New ToDo Entry 5", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/29", "order": 11, "created_at": "2022-02-20T10:37:13.918938+00:00", "updated_at": "2022-02-20T10:37:13.922719+00:00"}, {"id": 30, "title": "New ToDo got Updated", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/30", "order": 0, "created_at": "2022-02-20T10:42:19.924938+00:00", "updated_at": "2022-02-20T10:45:31.862448+00:00"}, {"id": 31, "title": "New ToDo Entry 2", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/31", "order": 2, "created_at": "2022-02-20T10:42:19.992505+00:00", "updated_at": "2022-02-20T10:42:19.999702+00:00"}, {"id": 32, "title": "New ToDo Entry 4", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/32", "order": 13, "created_at": "2022-02-20T10:42:20.160146+00:00", "updated_at": "2022-02-20T10:42:20.170466+00:00"}, {"id": 33, "title": "New ToDo Entry 3", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/33", "order": 12, "created_at": "2022-02-20T10:42:20.239655+00:00", "updated_at": "2022-02-20T10:42:20.258799+00:00"}, {"id": 34, "title": "New ToDo Entry 5", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/34", "order": 14, "created_at": "2022-02-20T10:42:20.239757+00:00", "updated_at": "2022-02-20T10:42:20.262804+00:00"}, {"id": 35, "title": "New ToDo Entry 17", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/35", "order": 15, "created_at": "2022-02-20T10:42:40.252279+00:00", "updated_at": "2022-02-20T10:42:40.256770+00:00"}, {"id": 36, "title": "0", "completed": true, "url": "https://mysterious-thicket-31854.herokuapp.com/36", "order": 0, "created_at": "2022-02-20T10:42:56.701008+00:00", "updated_at": "2022-02-20T10:45:49.497473+00:00"}, {"id": 37, "title": "New ToDo Entry 2020", "completed": true, "url": "https://mysterious-thicket-31854.herokuapp.com/37", "order": 16, "created_at": "2022-02-20T10:42:56.873276+00:00", "updated_at": "2022-02-20T10:42:56.880065+00:00"}, {"id": 38, "title": "a todo", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/38", "order": 0, "created_at": "2022-02-20T10:42:56.993895+00:00", "updated_at": "2022-02-20T10:42:56.998150+00:00"}, {"id": 39, "title": "New ToDo Check", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/39", "order": 17, "created_at": "2022-02-20T10:43:06.539398+00:00", "updated_at": "2022-02-20T10:43:06.546488+00:00"}, {"id": 40, "title": "New ToDo Entry 1", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/40", "order": 1, "created_at": "2022-02-20T10:45:29.320808+00:00", "updated_at": "2022-02-20T10:45:29.325003+00:00"}, {"id": 41, "title": "New ToDo Entry 2", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/41", "order": 2, "created_at": "2022-02-20T10:45:29.340967+00:00", "updated_at": "2022-02-20T10:45:29.344932+00:00"}, {"id": 42, "title": "New ToDo Entry 4", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/42", "order": 19, "created_at": "2022-02-20T10:45:29.539051+00:00", "updated_at": "2022-02-20T10:45:29.543291+00:00"}, {"id": 43, "title": "New ToDo Entry 3", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/43", "order": 18, "created_at": "2022-02-20T10:45:29.582099+00:00", "updated_at": "2022-02-20T10:45:29.586185+00:00"}, {"id": 44, "title": "New ToDo Entry 5", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/44", "order": 20, "created_at": "2022-02-20T10:45:29.645454+00:00", "updated_at": "2022-02-20T10:45:29.649456+00:00"}, {"id": 45, "title": "New ToDo Entry 17", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/45", "order": 21, "created_at": "2022-02-20T10:45:49.352215+00:00", "updated_at": "2022-02-20T10:45:49.356224+00:00"}, {"id": 46, "title": "New ToDo Entry 2020", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/46", "order": 22, "created_at": "2022-02-20T10:45:50.401645+00:00", "updated_at": "2022-02-20T10:45:50.405916+00:00"}, {"id": 47, "title": "New ToDo Entry 2020", "completed": true, "url": "https://mysterious-thicket-31854.herokuapp.com/47", "order": 22, "created_at": "2022-02-20T10:45:50.517066+00:00", "updated_at": "2022-02-20T10:45:50.532559+00:00"}, {"id": 48, "title": "a todo", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/48", "order": 0, "created_at": "2022-02-20T10:45:50.596077+00:00", "updated_at": "2022-02-20T10:45:50.600012+00:00"}, {"id": 49, "title": "New ToDo Check", "completed": false, "url": "https://mysterious-thicket-31854.herokuapp.com/49", "order": 23, "created_at": "2022-02-20T10:47:28.633485+00:00", "updated_at": "2022-02-20T10:47:28.646103+00:00"}]<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+a todo<br/>
+New ToDo Entry 3<br/>
+New ToDo Entry 6<br/>
+New ToDo Entry 2<br/>
+New ToDo got Updated<br/>
+New ToDo Entry 2<br/>
+New ToDo Entry 4<br/>
+New ToDo Entry 3<br/>
+New ToDo Entry 5<br/>
+New ToDo got Updated<br/>
+New ToDo Entry 3<br/>
+New ToDo Entry 4<br/>
+New ToDo Entry 2<br/>
+New ToDo Entry 5<br/>
+New ToDo got Updated<br/>
+New ToDo Entry 2<br/>
+New ToDo Entry 4<br/>
+New ToDo Entry 3<br/>
+New ToDo Entry 5<br/>
+New ToDo Entry 17<br/>
+0<br/>
+New ToDo Entry 2020<br/>
+a todo<br/>
+New ToDo Check<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>ServicePackage.RequestResponceTest@316bcf94</td></tr>
+<tr>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 2<br/>
+<a href="#Output-1198426006" onClick='toggleBox("Output-1198426006", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1198426006" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1198426006">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 2<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
+<tr>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 4<br/>
+<a href="#Output-498023236" onClick='toggleBox("Output-498023236", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-498023236" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-498023236">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 4<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
+<tr>
+<td title='TestPackage.ActionsOnToDosPage.AddToDosListTest()'><b>AddToDosListTest</b><br>Test class: TestPackage.ActionsOnToDosPage<br>Parameters: New ToDo Entry 3<br/>
+<a href="#Output-501261420" onClick='toggleBox("Output-501261420", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-501261420" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-501261420">
+Add New Todo to existing list - ToDo Name :New ToDo Entry 3<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>TestPackage.ActionsOnToDosPage@2805d709</td></tr>
 </table><p>
 </body>
 </html>
